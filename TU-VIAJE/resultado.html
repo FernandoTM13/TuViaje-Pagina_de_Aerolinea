@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Viaje</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <!-- Google Fonts NUnito -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        li{
+            list-style-type: none;
+        }
+    </style>
+    
+</head>
+<body onLoad='cargar();'>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #032D97;">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <div id="navbar" style="font-family: 'Nunito'; font-weight: 700;" class="text-light">
+                        <img src="./public/assets/logo-white.png" loading="lazy" width="60" height="30" class="d-inline-block align-top" alt="">
+                        Tu Viaje
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Collapsible wrapper -->
+                <div class="navbar-collapse text-center collapse show" id="navbarSupportedContent" style="font-family: 'Nunito'; font-weight: 700;">
+                    <!-- Left links -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">OFERTAS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">MIS VIAJES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">ESTADO DE VUELO</a>
+                        </li>
+                    </ul>
+
+                    <li class="nav-item dropdown" style="background-color: white; border-radius: 10px;">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-family: 'Nunito'; color: #032D97;">
+                            <img src="./public/assets/icon-person.png" loading="lazy" width="30" height="30" class="d-inline-block align-top" alt="" style="font-family: 'Nunito'" > PAULA ROJAS
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                          <li><a class="dropdown-item" href="#">Perfil</a></li>
+                          <li><a class="dropdown-item" href="#">Modificar Vuelo</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+                        </ul>
+                      </li>
+                      
+                    
+                    <button type="button" class="btn">
+                        <img src="./public/assets/icon-vuelo.png" loading="lazy" width="30" height="30" class="d-inline-block align-top" alt="">
+                        <div  class="badge bg-light rounded-circle text-black text-center px-1 py-1" style="height: 30px; width: 30px; font-size: 22px; ">
+                            <p style="text-align: center; top: auto;">0</p>
+                        </div>
+
+                    </button>
+    
+                    
+                </div>
+            
+            </div>
+            
+        </nav>
+    </header>
+    <main class="container-fluid" style="margin-top: 6rem;">
+        <div class="container-fluid">
+            <div class="container input-group">
+                <input type="text" aria-label="First name" class="form-control" style="width:14%" placeholder="Lima, LIM - Perú">
+
+                <input type="search" class="form-control" placeholder="Seúl, INC - Corea del Sur" aria-label="Search"
+                aria-describedby="search-addon" style="height:auto; width:14%;border-radius:0px" required="true"/>
+                <select class="form-select" style="width:8%; border-radius:0" style="border-color: tomato;">
+                    <option>IDA Y VUELTA</option>
+                    <option>SOLO IDA</option>
+                    <option>MULTIDESTINO</option>
+                </select>
+                <input type="date" value="2021-01-13" aria-label="Last name" class="form-control" style="width: 9%;">
+                <input type="date" value="2021-02-21" aria-label="Last name" class="form-control" style="width: 9%;">
+                <select class="form-select" style="width:7%; border-radius:0" style="border-color: tomato;">
+                    <option>ECONÓMICO</option>
+                    <option>PREMIUN</option>
+                </select>
+                <!-- <p>
+                    <a class="btn" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">1 PASAJERO</a>
+                </p>
+                <div class="collapse" id="multiCollapseExample1">
+                    <div class="card card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">An item</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                        </ul>
+                    </div>
+                </div> -->
+                <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="border-color: rgb(214, 214, 214);">
+                    1 PASAJERO
+                </button>
+                    <ul class="dropdown-menu">
+                        <li class="list-group-item ">Adulto
+                            <a class="btn py-0" style="align-self: center;"><img src="./public/assets/-.png" style="height: 17px;"></a>1
+                            <a class="btn py-0" style="padding-right: 0px;"><img src="./public/assets/+.png" style="height: 17px;"></a>
+                            <p style="font-size: 12px; font-weight: lighter; margin-bottom: 1px;">12 añoa o más</p></li>
+                        <li class="list-group-item">Niño
+                            <a class="btn py-0" style="padding-left: 25px;"><img src="./public/assets/-.png" style="height: 17px;"></a>0
+                            <a class="btn py-0" style="padding-right: 0px;"><img src="./public/assets/+.png" style="height: 17px;"></a>
+                            <p style="font-size: 12px; font-weight: lighter; margin-bottom: 1px;">2 a 11 años</p>
+                        </li>
+                        <li class="list-group-item">Bebe
+                            <a class="btn py-0 ml-2" style="padding-left: 25px;"><img src="./public/assets/-.png" style="height: 17px;"></a>0
+                            <a class="btn py-0" style="padding-right: 0px;"><img src="./public/assets/+.png" style="height: 17px;"></a>
+                            <p style="font-size: 12px; font-weight: lighter; margin-bottom: 1px;">Menores de 2 años</p>
+                        </li>
+                </ul>
+                
+                <button type="button" class="btn" style="height: 60PX; border-radius:0px;background-color:#032D97; border-bottom-right-radius: 10px; border-top-right-radius: 10px;">
+                    <img src="./public/assets/lupa.png" alt="" style="height: 25px;">
+                </button>
+            </div>
+        </div>
+        <div class="container mt-3">
+            <div class="row" style=" font-family: 'Nunito';">
+                <div class="col col-6">
+                    <div class="row">
+                        <div class="col col-sm-8">
+                            <p class="d-inline" style="font-size: 30px; font-family: 'Nunito'; font-weight: 400;">Elige un
+                                <p class="d-inline" style="font-size: 30px; font-family: 'Nunito'; font-weight: 700; color: #032D97;">Vuelo de Ida</p>
+                        </div>
+                        <div class="col col-sm-4">
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" 
+                                style="width:100%; border-radius:10px; height: 50px; border-color: black;"> 
+                                  Organizar por
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#" onclick="btn1();" id="btn1">Destacado</a></li>
+                                    <li><a class="dropdown-item" href="#" onclick="btn2();" id="btn2">Más Económico</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#" onclick="btn3();" id="btn3">Fifth</a></li>
+                                  </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="container-fluid px-0" id="section1">
+                        <div class="card  mt-3" style="max-width: 100%; border-radius: 10px;">
+                            <div class="card-header p-0 bg-transparent" style="border: white;">
+                                <ul class="list-group list-group-horizontal-sm">
+                                    <li class="list-group-item py-1" style="background-color: rgba(166, 218, 255, 0.6); font-weight: 700; font-size: 13px; border-top-left-radius: 10px; border-right-color: #032D53;">Más rápido</li>
+                                    <li class="list-group-item py-1" style="background-color: rgba(166, 218, 255, 0.6); font-weight: 700; font-size: 13px; border-bottom-right-radius: 10px;">Más económico</li>
+                                  </ul>
+                            </div>
+                            <div class="card-body text-success">
+                                <div class="row">
+                                    <div class="col col-4">
+                                        <h3 class="card-title d-inline" style="font-weight: 900; color: black;">01:00
+                                        <h3 class="d-inline" style="font-weight: 400; color: black;">LIM</h3></h3>
+                                        <p class="card-text mb-0">
+                                            <p class="mb-0" style="color: #605B6A; font-weight: 700;">Lima</p>
+                                            <p class="mb-0" style="color: #605B6A; font-weight: 700;">Boeing B767-300</p>
+                                            <p class="mb-0" style="font-weight: 300; color: #605B6A;">Operado por LATAM Airlines Perú
+                                        </p>
+                                    </div>
+                                    <div class="col col-4 text-center pt-4">
+                                        <img src="./public/assets/carbon_time.png" style="height: 30px">
+                                        <p class="text-black mb-0 mt-2" style="size: 18px; font-weight: 700;">26h 40min</p>
+                                        <a class="btn p-0 mb-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" 
+                                        aria-controls="offcanvasRight" style="color: #0779E4; font-weight: 700;">Parada</a>
+
+                                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" style="width: 40%;">
+                                            <div class="offcanvas-header m-3">
+                                                <h5 id="offcanvasRightLabel" style="color: #032D97; font-weight: 700;">Itinerario de vuelo</h5>
+                                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                            </div>
+                                            <div class="offcanvas-body">
+                                                <img src="./public/assets/linea.png" style="height: 22px;"> 
+                                                <div class="row">
+                                                    <div class="col col-4 text-center">
+                                                        <p class="mb-0" style="color: #0779E4; font-weight: 600;">Salida</p>
+                                                        <p class="mb-0 text-black" style="font-weight: 700;">LIM 1:00</p>
+                                                        <p class="mb-0 text-black" style="font-weight: 300;">J Chavez Inti</p>
+                                                    </div>
+                                                    <div class="col col-4 text-center py-3">
+                                                        <img src="./public/assets/carbon_time.png" style="height: 25px">
+                                                        <p class="text-black mt-1" style="font-size: 15px; font-weight: 700;">8 h 55 min</p>
+                                                    </div>
+                                                    <div class="col col-4 text-center">
+                                                        <p class="mb-0" style="color: #0779E4; font-weight: 600;">Llegada</p>
+                                                        <p class="mb-0 text-black" style="font-weight: 700;">LAX 6:55</p>
+                                                        <p class="mb-0 text-black" style="font-weight: 300;">Los Angeles Inti</p>
+                                                    </div>
+                                                </div>
+                                                <div class="text-black">
+                                                    <p class="mb-1" style="font-weight: 600;">LA2476 - Boeing B767-300</p>
+                                                    <p class="mb-0 d-inline" style="font-weight: 300;">Operado por Latama Airlines Perú</p>
+                                                    <button type="button" class="btn p-0" data-bs-toggle="tooltip" data-bs-placement="top" 
+                                                    title="Bebidas Alcohólicas y no alcohólicas">
+                                                        <img src="./public/assets/cil_drink-alcohol.png" style="height: 18px; width: 18px;">
+                                                    </button>
+                                                    <button type="button" class="btn p-0" data-bs-toggle="tooltip" data-bs-placement="top" 
+                                                    title="Entretenimiento a bordo">
+                                                        <img src="./public/assets/cil_media-play.png" style="height: 18px; width: 18px;">
+                                                    </button>
+                                                    <button type="button" class="btn p-0" data-bs-toggle="tooltip" data-bs-placement="top" 
+                                                    title="Servicio de alimentación">
+                                                        <img src="./public/assets/fluent_food-16-filled.png" style="height: 18px; width: 18px;">
+                                                    </button>
+                                                    <button type="button" class="btn p-0" data-bs-toggle="tooltip" data-bs-placement="top" 
+                                                    title="Tomacorriente con cargador USB">
+                                                        <img src="./public/assets/mdi_cable-data.png" style="height: 18px; width: 18px;">
+                                                    </button>
+                                                </div>
+                                                <div class="text-black mx-3" style="background-color: rgba(166, 218, 255, 0.6); border-radius: 10px; margin-top: 2rem;">
+                                                    <p class="d-inline mb-0" style="font-weight: 700;">Conexión Los Ángeles</p>
+                                                    <p class="d-inline mb-0" style="font-weight: 300;">(cambio de vuelo)</p>
+                                                    <p style="font-weight: 700;">3h 55min</p>
+                                                </div>
+                                                <img src="./public/assets/linea.png" style="height: 22px;" class="mt-3"> 
+                                                <div class="row">
+                                                    <div class="col col-4 text-center">
+                                                        <p class="mb-0" style="color: #0779E4; font-weight: 600;">Salida</p>
+                                                        <p class="mb-0 text-black" style="font-weight: 700;">LAX 9:55</p>
+                                                        <p class="mb-0 text-black" style="font-weight: 300;">Los Angeles Inti</p>
+                                                    </div>
+                                                    <div class="col col-4 text-center py-3">
+                                                        <img src="./public/assets/carbon_time.png" style="height: 25px">
+                                                        <p class="text-black mt-1" style="font-size: 15px; font-weight: 700;">13h 50min</p>
+                                                    </div>
+                                                    <div class="col col-4 text-center">
+                                                        <p class="mb-0" style="color: #0779E4; font-weight: 600;">Llegada</p>
+                                                        <p class="mb-0 text-black" style="font-weight: 700;">INC 17:40</p>
+                                                        <p class="mb-0 text-black" style="font-weight: 300;">Seoul, Incheon</p>
+                                                    </div>
+                                                </div>
+                                                <div class="text-black">
+                                                    <p class="mb-1" style="font-weight: 600;">LA8427 - Boeing B777-300</p>
+                                                    <p class="mb-0 d-inline" style="font-weight: 300;">Operado por Korean Air</p>
+                                                    <button type="button" class="btn p-0" data-bs-toggle="tooltip" data-bs-placement="top" 
+                                                    title="Bebidas Alcohólicas y no alcohólicas">
+                                                        <img src="./public/assets/cil_drink-alcohol.png" style="height: 18px; width: 18px;">
+                                                    </button>
+                                                    <button type="button" class="btn p-0" data-bs-toggle="tooltip" data-bs-placement="top" 
+                                                    title="Entretenimiento a bordo">
+                                                        <img src="./public/assets/cil_media-play.png" style="height: 18px; width: 18px;">
+                                                    </button>
+                                                    <button type="button" class="btn p-0" data-bs-toggle="tooltip" data-bs-placement="top" 
+                                                    title="Servicio de alimentación">
+                                                        <img src="./public/assets/fluent_food-16-filled.png" style="height: 18px; width: 18px;">
+                                                    </button>
+                                                    <button type="button" class="btn p-0" data-bs-toggle="tooltip" data-bs-placement="top" 
+                                                    title="Tomacorriente con cargador USB">
+                                                        <img src="./public/assets/mdi_cable-data.png" style="height: 18px; width: 18px;">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                    </div>
+                                    <div class="col col-4">
+                                        <h3 class="card-title d-inline" style="font-weight: 900; color: black;">17:40
+                                            <h3 class="d-inline" style="font-weight: 400; color: black;">INC</h3></h3>
+                                            <p class="card-text mb-0">
+                                                <p class="mb-0" style="color: #605B6A; font-weight: 700;">Seoul</p>
+                                                <p class="mb-0" style="color: #605B6A; font-weight: 700;">Boeing B777-300</p>
+                                                <p class="mb-0" style="font-weight: 300; color: #605B6A;">Operado por Korean Air
+                                            </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent p-0" style="border-color: rgb(182, 181, 181);">
+                                <div class="accordion" id="accordionExample">
+                                    <div class="accordion-item row mx-0 px-0">
+                                      <h2 class="accordion-header" style="padding-left: 0px;" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                          <div class="col col-8">
+                                            <p class="p-0 m-0" style="color: #0779E4; font-weight: 700;">Tarifas</p>
+                                          </div>
+                                          <div class="col col-4">
+                                              <p class="d-inline" style="font-weight: 300; color: black; font-family: 'Roboto';">Desde</p>
+                                              <p class="d-inline text-end" style="font-weight: 700; color: #061437;"> USD 3056.55</p>
+                                          </div>
+                                        </button>
+                                      </h2>
+                                      <div id="collapseTwo" class="accordion-collapse collapse p-0" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body p-0">
+                                          <div class="card">
+                                            <div class="card-body">
+                                              <p class="card-title mb-0" style="font-weight: 700; font-size: 21px; color: #2EC991;">TOP</p>
+                                              <div class="row">
+                                                <div class="col col-4">
+                                                    <p class="card-text mb-0" style="font-weight: 600;">Esta tarifa incluye:</p>
+                                                    <button type="button" class="btn p-1" style="background-color: rgba(46, 201, 145, 0.4);" data-bs-toggle="tooltip" data-bs-placement="top" 
+                                                    title="Asiento cómodo (mayor reclinación y espacio)">
+                                                        <img src="./public/assets/carbon_passenger-plus.png" style="height: 20px; width: 20px;">
+                                                    </button>
+                                                    <button type="button" class="btn p-1" style="background-color: rgba(46, 201, 145, 0.4);" data-bs-toggle="tooltip" data-bs-placement="top" 
+                                                    title="Articulo Personal (Cartera o bolso)">
+                                                        <img src="./public/assets/articulo personal.png" style="height: 20px; width: 20px;">
+                                                    </button>
+                                                    <button type="button" class="btn p-1" style="background-color: rgba(46, 201, 145, 0.4);" data-bs-toggle="tooltip" data-bs-placement="top" 
+                                                    title="1 equipaje de mano (Peso max 10 kg cada una)">
+                                                        <img src="./public/assets/equipaje de mano.png" style="height: 20px; width: 20px;">
+                                                    </button>
+                                                    <button type="button" class="btn p-1" style="background-color: rgba(46, 201, 145, 0.4);" data-bs-toggle="tooltip" data-bs-placement="top" 
+                                                    title="2 equipaje de bodega (Peso max 23 kg cada uno)">
+                                                        <img src="./public/assets/twemoji_baggage-claim.png" style="height: 20px; width: 20px;">
+                                                    </button>
+                                                </div>
+                                                <div class="col col-5">
+                                                    <p class="card-text mb-0" style="font-weight: 600;">Extras incluidos:</p>
+                                                    <button type="button" class="btn p-1" style="background-color: rgba(0, 0, 0, 0.14)" data-bs-toggle="tooltip" data-bs-placement="top" 
+                                                    title="Devolución de 100% de acuerdo a las condiciones de la tarifa">
+                                                        <img src="./public/assets/carbon_pause-past.png" style="height: 20px; width: 20px;">
+                                                    </button>
+                                                    <button type="button" class="btn p-1" style="background-color: rgba(0, 0, 0, 0.14)" data-bs-toggle="tooltip" data-bs-placement="top" 
+                                                    title="Cambios desde USD 0.00 + costo por diferencia de tarifa">
+                                                        <img src="./public/assets/vaadin_money-exchange.png" style="height: 20px; width: 20px;">
+                                                    </button>
+                                                </div>
+                                                <div class="col col-3 mt-4 pt-3" style="padding-right: 0px;">
+                                                    <p class="d-inline text-end" style="font-weight: 700; color: #061437;">USD 3056.55</p>
+                                                    <a class="d-inline" href="#"><img src="./public/assets/navigate_next.png" style="height: 20px; width: 15px;"></a>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="card">
+                                              <div class="card-body">
+                                                <p class="card-title mb-0" style="font-weight: 700; font-size: 21px; color: #8B13E9;">PLUS</p>
+                                                <div class="row">
+                                                  <div class="col col-4">
+                                                      <p class="card-text mb-0" style="font-weight: 600;">Esta tarifa incluye:</p>
+                                                      <button type="button" class="btn p-1" style="background-color: rgba(139, 19, 233, 0.4);" data-bs-toggle="tooltip" data-bs-placement="top" 
+                                                      title="Articulo Personal (Cartera o bolso)">
+                                                          <img src="./public/assets/articulo personal.png" style="height: 20px; width: 20px;">
+                                                      </button>
+                                                      <button type="button" class="btn p-1" style="background-color: rgba(139, 19, 233, 0.4);" data-bs-toggle="tooltip" data-bs-placement="top" 
+                                                      title="1 equipaje de mano (Peso max 10 kg cada una)">
+                                                          <img src="./public/assets/equipaje de mano.png" style="height: 20px; width: 20px;">
+                                                      </button>
+                                                      <button type="button" class="btn p-1" style="background-color: rgba(139, 19, 233, 0.4);" data-bs-toggle="tooltip" data-bs-placement="top" 
+                                                      title="2 equipaje de bodega (Peso max 23 kg cada uno)">
+                                                          <img src="./public/assets/twemoji_baggage-claim.png" style="height: 20px; width: 20px;">
+                                                      </button>
+                                                      <button type="button" class="btn p-1" style="background-color: rgba(139, 19, 233, 0.4);" data-bs-toggle="tooltip" data-bs-placement="top" 
+                                                      title="Selección de asiento">
+                                                          <img src="./public/assets/ic_baseline-airline-seat-recline-extra.png" style="height: 20px; width: 20px;">
+                                                      </button>
+                                                  </div>
+                                                  <div class="col col-5">
+                                                      <p class="card-text mb-0" style="font-weight: 600;">Extras incluidos:</p>
+                                                      <button type="button" class="btn p-1" style="background-color: rgba(0, 0, 0, 0.14)" data-bs-toggle="tooltip" data-bs-placement="top" 
+                                                      title="Devolución de 100% de acuerdo a las condiciones de la tarifa">
+                                                          <img src="./public/assets/carbon_pause-past.png" style="height: 20px; width: 20px;">
+                                                      </button>
+                                                      <button type="button" class="btn p-1" style="background-color: rgba(0, 0, 0, 0.14)" data-bs-toggle="tooltip" data-bs-placement="top" 
+                                                      title="Cambios desde USD 0.00 + costo por diferencia de tarifa">
+                                                          <img src="./public/assets/vaadin_money-exchange.png" style="height: 20px; width: 20px;">
+                                                      </button>
+                                                  </div>
+                                                  <div class="col col-3 mt-4 pt-3" style="padding-right: 0px;">
+                                                      <p class="d-inline text-end" style="font-weight: 700; color: #061437;">USD 3130.89</p>
+                                                      <a class="d-inline" href="#"><img src="./public/assets/navigate_next.png" style="height: 20px; width: 15px;"></a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                          </div>
+                                          <div class="card">
+                                              <div class="card-body">
+                                                <p class="card-title mb-0" style="font-weight: 700; font-size: 21px; color: #032D97;">PREMIUN</p>
+                                                <div class="row">
+                                                  <div class="col col-4">
+                                                      <p class="card-text mb-0" style="font-weight: 600;">Esta tarifa incluye:</p>
+                                                      <button type="button" class="btn p-1" style="background-color: rgba(3, 45, 151, 0.4);" data-bs-toggle="tooltip" data-bs-placement="top" 
+                                                      title="Articulo Personal (Cartera o bolso)">
+                                                          <img src="./public/assets/articulo personal.png" style="height: 20px; width: 20px;">
+                                                      </button>
+                                                      <button type="button" class="btn p-1" style="background-color: rgba(3, 45, 151, 0.4);" data-bs-toggle="tooltip" data-bs-placement="top" 
+                                                      title="1 equipaje de mano (Peso max 10 kg cada una)">
+                                                          <img src="./public/assets/equipaje de mano.png" style="height: 20px; width: 20px;">
+                                                      </button>
+                                                      <button type="button" class="btn p-1" style="background-color: rgba(3, 45, 151, 0.4);" data-bs-toggle="tooltip" data-bs-placement="top" 
+                                                      title="2 equipaje de bodega (Peso max 23 kg cada uno)">
+                                                          <img src="./public/assets/twemoji_baggage-claim.png" style="height: 20px; width: 20px;">
+                                                      </button>
+                                                      <button type="button" class="btn p-1" style="background-color: rgba(3, 45, 151, 0.4);" data-bs-toggle="tooltip" data-bs-placement="top" 
+                                                      title="Selección de asiento">
+                                                          <img src="./public/assets/ic_baseline-airline-seat-recline-extra.png" style="height: 20px; width: 20px;">
+                                                      </button>
+                                                  </div>
+                                                  <div class="col col-2">
+                                                      <p class="card-text mb-0" style="font-weight: 600;">Extras:</p>
+                                                      <button type="button" class="btn p-1" style="background-color: rgba(0, 0, 0, 0.14)" data-bs-toggle="tooltip" data-bs-placement="top" 
+                                                      title="Devolución de 100% de acuerdo a las condiciones de la tarifa">
+                                                          <img src="./public/assets/carbon_pause-past.png" style="height: 20px; width: 20px;">
+                                                      </button>
+                                                      <button type="button" class="btn p-1" style="background-color: rgba(0, 0, 0, 0.14)" data-bs-toggle="tooltip" data-bs-placement="top" 
+                                                      title="Cambios desde USD 0.00 + costo por diferencia de tarifa">
+                                                          <img src="./public/assets/vaadin_money-exchange.png" style="height: 20px; width: 20px;">
+                                                      </button>
+                                                  </div>
+                                                  <div class="col col-3">
+                                                      <p class="card-text mb-0" style="font-weight: 600;">Exclusivo:</p>
+                                                      <button type="button" class="btn p-1" style="background-color: rgba(255, 168, 0, 0.62)" data-bs-toggle="tooltip" data-bs-placement="top" 
+                                                      title="Asiento Cama (Reclinación 180°)">
+                                                          <img src="./public/assets/carbon_pause-past.png" style="height: 20px; width: 20px;">
+                                                      </button>
+                                                      <button type="button" class="btn p-1" style="background-color: rgba(255, 168, 0, 0.62)" data-bs-toggle="tooltip" data-bs-placement="top" 
+                                                      title="Gatronomía Premiun (Mejores platos por los mejores Chef)">
+                                                          <img src="./public/assets/vaadin_money-exchange.png" style="height: 20px; width: 20px;">
+                                                      </button>
+                                                  </div>
+                                                  <div class="col col-3 mt-4 pt-3" style="padding-right: 0px;">
+                                                      <p class="d-inline text-end" style="font-weight: 700; color: #032D97;">USD 3930.55</p>
+                                                      <a class="d-inline" href="#"><img src="./public/assets/navigate_next.png" style="height: 20px; width: 15px;"></a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                            </div>
+                            </div>
+                        
+                        </div>
+                    </div>    
+                    <div class="container-fluid px-0" id="section2">
+                        <div class="card  mt-3" style="max-width: 100%; border-radius: 10px;">
+                            <div class="card-header ">Más rápido Más económico</div>
+                            <div class="card-body text-success">
+                                <div class="row">
+                                    <div class="col col-4">
+                                        <h3 class="card-title d-inline" style="font-weight: 900; color: black;">01:00
+                                        <h3 class="d-inline" style="font-weight: 400; color: black;">LIM</h3></h3>
+                                        <p class="card-text mb-0">
+                                            <p class="mb-0" style="color: #605B6A; font-weight: 700;">Lima</p>
+                                            <p class="mb-0" style="color: #605B6A; font-weight: 700;">Boeing B767-300</p>
+                                            <p class="mb-0" style="font-weight: 300; color: #605B6A;">Operado por LATAM Airlines Perú
+                                        </p>
+                                    </div>
+                                    <div class="col col-4 text-center pt-4">
+                                        <img src="./public/assets/carbon_time.png" style="height: 30px">
+                                        <p class="text-black mb-0" style="size: 18px; font-weight: 700;">26 h 40 min</p>
+                                        <a class="btn p-0 m-0 mb-0" style="color: #0779E4; font-weight: 700;">Paradero</a>
+                                    </div>
+                                    <div class="col col-4">
+                                        <h3 class="card-title d-inline" style="font-weight: 900; color: black;">17:40
+                                            <h3 class="d-inline" style="font-weight: 400; color: black;">INC</h3></h3>
+                                            <p class="card-text mb-0">
+                                                <p class="mb-0" style="color: #605B6A; font-weight: 700;">Seoul</p>
+                                                <p class="mb-0" style="color: #605B6A; font-weight: 700;">Boeing B777-300</p>
+                                                <p class="mb-0" style="font-weight: 300; color: #605B6A;">Operado por Korean Air
+                                            </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent" style="border-color: black;">
+                               <div class="row">
+                                    <div class="col col-8">
+                                        <a class="btn p-0 m-0" style="color: #0779E4; font-weight: 700;">Tarifas</a>
+                                    </div>
+                                    <div class="col col-4">
+                                        <p class="d-inline" style="font-weight: 300;">Desde</p>
+                                        <p class="d-inline" style="font-weight: 900; color: #061437;"> USD 3056.55</p>
+                                    </div>
+                               </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid px-0" id="section3">
+                        <div class="card  mt-3" style="max-width: 100%; border-radius: 10px;">
+                            <div class="card-header ">Más rápido Más económico</div>
+                            <div class="card-body text-success">
+                                <div class="row">
+                                    <div class="col col-4">
+                                        <h3 class="card-title d-inline" style="font-weight: 900; color: black;">01:00
+                                        <h3 class="d-inline" style="font-weight: 400; color: black;">LIM</h3></h3>
+                                        <p class="card-text mb-0">
+                                            <p class="mb-0" style="color: #605B6A; font-weight: 700;">Lima</p>
+                                            <p class="mb-0" style="color: #605B6A; font-weight: 700;">Boeing B767-300</p>
+                                            <p class="mb-0" style="font-weight: 300; color: #605B6A;">Operado por LATAM Airlines Perú
+                                        </p>
+                                    </div>
+                                    <div class="col col-4 text-center pt-4">
+                                        <img src="./public/assets/carbon_time.png" style="height: 30px">
+                                        <p class="text-black mb-0" style="size: 18px; font-weight: 700;">26 h 40 min</p>
+                                        <a class="btn p-0 m-0 mb-0" style="color: #0779E4; font-weight: 700;">Paradero</a>
+                                    </div>
+                                    <div class="col col-4">
+                                        <h3 class="card-title d-inline" style="font-weight: 900; color: black;">17:40
+                                            <h3 class="d-inline" style="font-weight: 400; color: black;">INC</h3></h3>
+                                            <p class="card-text mb-0">
+                                                <p class="mb-0" style="color: #605B6A; font-weight: 700;">Seoul</p>
+                                                <p class="mb-0" style="color: #605B6A; font-weight: 700;">Boeing B777-300</p>
+                                                <p class="mb-0" style="font-weight: 300; color: #605B6A;">Operado por Korean Air
+                                            </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-transparent" style="border-color: black;">
+                               <div class="row">
+                                    <div class="col col-8">
+                                        <a class="btn p-0 m-0" style="color: #0779E4; font-weight: 700;">Tarifas</a>
+                                    </div>
+                                    <div class="col col-4">
+                                        <p class="d-inline" style="font-weight: 300;">Desde</p>
+                                        <p class="d-inline" style="font-weight: 900; color: #061437;"> USD 3056.55</p>
+                                    </div>
+                               </div> 
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="col .col-sm-6">
+                    <div class="card text-start" style="width: 100%; border-radius: 10px; height: 100%;">
+                        <div class="card-body">
+                          <h5 class="card-title" style="font-weight: 700; color: #032D97;">Resumen de Viaje</h5>
+                          <div class="card-text text-center">
+                            <p class=" mb-0" style="font-weight: 500; margin-top: 8rem;">Aún no has seleccionado su vuelo</p>
+                            <p class="" style="font-weight: 300;margin-bottom: 9rem;">Tus vuelos aparecerán aquí una vez que los selecciones.</p>
+                          </div>
+                          <a href="#" class="btn text-center text-light" style="background-color: #032D97; border-radius: 15px; width: 100%; font-weight: 700;">Continuar</a>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script>
+        function btn1() {
+            $("#section1").show();
+            $("#section2").hide();
+            $("#section3").hide();
+            $("#btn1").css({"background-color": "rgba(166, 218, 255, 1)", "color": "black"});
+            $("#btn2").css({"color": "black"});
+            $("#btn3").css({"color": "black"});
+        };
+
+        function btn2() {
+            $("#section2").show();
+            $("#section1").hide();
+            $("#section3").hide();
+            $("#btn2").css({"background-color": "rgba(166, 218, 255, 1)", "color": "black"});
+            $("#btn1").css({"color": "black"});
+            $("#btn3").css({"color": "black"});
+        };
+
+        function btn3() {
+            $("#section3").show();
+            $("#section2").hide();
+            $("#section1").hide();
+            $("#btn3").css({"background-color": "rgba(166, 218, 255, 1)", "color": "black"});
+            $("#btn2").css({"color": "black"});
+            $("#btn1").css({"color": "black"});
+        };
+        function getQueryVariable(variable) {
+            // Estoy asumiendo que query es window.location.search.substring(1);
+            var query = window.location.search.substring(1); //"product_id=32&cat_id=1&sessionid=123";
+            var vars = query.split("&");
+            //alert(vars);
+            for (var i=0; i < vars.length; i++) {
+                var pair = vars[i].split("="); 
+                if (pair[0] == variable) {
+                    return pair[1];
+                }
+            }
+            return false;
+        }
+
+        function cargar() {
+            var boton = getQueryVariable("id");
+
+            switch (boton) {
+                case '1':
+                    btn1();
+                    break;
+            
+                case '2':
+                    btn2();
+                    break;
+                case '3':
+                    btn3();
+                    break;
+                default:
+                    btn1();
+            }
+            
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+</body>
+
+</html>
