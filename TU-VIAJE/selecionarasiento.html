@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Viaje</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <!-- Google Fonts NUnito -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        li{
+            list-style-type: none;
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #032D97;">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <div id="navbar" style="font-family: 'Nunito'; font-weight: 700;" class="text-light">
+                        <img src="./public/assets/logo-white.png" loading="lazy" width="60" height="30" class="d-inline-block align-top" alt="">
+                        Tu Viaje
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Collapsible wrapper -->
+                <div class="navbar-collapse text-center collapse show" id="navbarSupportedContent" style="font-family: 'Nunito'; font-weight: 700;">
+                    <!-- Left links -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">OFERTAS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">MIS VIAJES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">ESTADO DE VUELO</a>
+                        </li>
+                    </ul>
+
+                    <li class="nav-item dropdown" style="background-color: white; border-radius: 10px;">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-family: 'Nunito'; color: #032D97;">
+                            <img src="./public/assets/icon-person.png" loading="lazy" width="30" height="30" class="d-inline-block align-top" alt="" style="font-family: 'Nunito'" > PAULA ROJAS
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                          <li><a class="dropdown-item" href="#">Perfil</a></li>
+                          <li><a class="dropdown-item" href="#">Modificar Vuelo</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+                        </ul>
+                      </li>
+                      
+                    
+                    <button type="button" class="btn">
+                        <img src="./public/assets/icon-vuelo.png" loading="lazy" width="30" height="30" class="d-inline-block align-top" alt="">
+                        <div  class="badge bg-light rounded-circle text-black text-center px-1 py-1" style="height: 30px; width: 30px; font-size: 22px; ">
+                            <p style="text-align: center; top: auto;">0</p>
+                        </div>
+
+                    </button>
+    
+                    
+                </div>
+            
+            </div>
+            
+        </nav>
+    </header>
+    
+</body>
