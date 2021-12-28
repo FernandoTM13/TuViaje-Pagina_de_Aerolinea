@@ -1,5 +1,6 @@
 function alerta(){
     Swal.fire({
+        
         title: '¿Desea selecionar este asiento?',
         icon: 'question',
         showCancelButton: true,
@@ -18,8 +19,8 @@ function alerta(){
 }
 
 function ocupado(){
-    Swal.fire({
+     Swal.fire({
         icon: 'error',
         title: 'Lo sentimos este asiento está ocupado'
-      })
+      }) 
 }
