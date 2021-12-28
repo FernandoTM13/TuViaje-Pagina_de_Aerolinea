@@ -1,0 +1,212 @@
+
+.contenedor {
+    width: 100%;
+    padding: 20px;
+    margin-left: 10px;
+    margin-top: 50px;
+}
+
+.botones{
+    float: left;
+    border: 1px solid black;
+    width: 300px;
+    height: 200px;
+}
+
+.avion{
+    float: left;
+    border: 1px solid rgb(255, 5, 5); 
+    width: 500px;
+    height: 1500px;
+}
+
+.datos{
+    float: left;
+    border: 1px solid rgb(28, 210, 255);
+    width: 300px;
+    height: 700px;
+}
+.datos, .botones, .avion{
+    margin-left: 20px;
+}
+
+#cabeza{
+    width: 350px; 
+    height: 340px;
+    margin: auto;
+    border-radius: 49% 51% 70% 30% / 100% 99% 1% 0% ;
+    border-top: 8px solid #e0dde1;
+    border-left: 8px solid #e0dde1;
+    border-right: 8px solid #e0dde1;
+    z-index: 2;
+}
+#cuerpo{
+    margin: auto;
+    width: 350px;
+    height: 1000px;
+    border-left: 8px solid #e0dde1;
+    border-right: 8px solid #e0dde1;
+    border-bottom: 8px solid #e0dde1;
+    border-bottom-right-radius: 100px ;
+    border-bottom-left-radius: 100px ;
+}
+.avion #cuerpo .asiento{
+    float: left;
+    margin-top: 20px;
+    margin-left: 25px;
+    width: 40px; 
+    height: 40px;
+}
+
+.avion #cuerpo .asiento:not(.nada){
+    background-color: #002e9a;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 1px 1px 3px black;
+  }
+
+
+
+  .avion #cuerpo .nada{
+    text-align: center;
+    line-height: 40px;
+    font-family: verdana, arial, helvet;
+    font-size: larger;
+    color: rgb(0, 0, 0);
+  }
+  .avion #cuerpo .amarillo{
+    background-color: #ffc801 !important;
+  }
+  .avion #cuerpo .celeste{
+    background-color: #00baf1!important;
+  }
+  .avion #cuerpo .gris{
+    background-color: #e0dde1 !important;
+  }
+  .avion #cuerpo .asiento:hover{
+    cursor: pointer;
+    background-color: green !important;
+}
+.avion #cuerpo .nada:hover{
+    background-color: rgb(255, 255, 255) !important;
+}
+.avion #cuerpo .gris:hover{
+    background-color: #e0dde1 !important;
+}
+  .clearfix{
+    float: none;
+    clear: both;
+  }
+.cola{
+    margin-top: 10px;
+    text-align: center;
+}
+  .cola img{
+      margin-top: 20px;
+      width: 50%;
+  }
+/* Botones */
+
+.botones .boton2, .botones .boton1{
+    float: left;
+    display: block;
+    width: 300px !important; 
+    height: 70px !important;
+    border-radius: 7px;
+    background-color:#162c63;
+    margin-top: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: verdana, arial, helvetica;
+    line-height: 60px;
+    text-align: center;
+    border: 2px solid #162c63;
+}
+.botones .boton2{
+    color: #162c63; 
+    background-color:white;
+}
+
+.botones .boton1 img{
+    float: left;
+    display: inline-block;
+    width: 100px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.botones .boton2 img{
+    float: left;
+    display: inline-block;
+    width: 100px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.cuadro{
+    margin-top: 10px;
+    width: 90%;
+    height: 500px;
+    border: 3px solid #e0dde1; 
+    border-radius: 20px;
+}
+.cuadro h2{
+    margin-left: 10px;
+    margin-top: 15px;
+    font-size: 15px;
+    font-family:  verdana, arial, helvetica;
+    font-weight: normal;
+}
+.cuadro .informacion{
+    margin: 10px 40px;
+}
+
+.datos .cuadro .cuadro1{
+    display: inline-block;
+    width: 40px; 
+    height: 40px;
+    margin-left: 15px;
+    margin-top: 30px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.datos .cuadro .titulo {
+    display: inline-block;
+}
+.datos .cuadro .celeste{
+    background-color: #00baf1;
+    box-shadow: 0 3px 3px #095066; 
+}
+.datos .cuadro .azul{
+    background-color: #002e99;
+    box-shadow: 0 3px 3px #011d5d; 
+}
+
+.datos .cuadro .amarillo{
+    background-color: #ffc801;
+    box-shadow: 0 3px 3px #7c8a04; 
+}
+
+.datos .cuadro .verde{
+    background-color: green;
+    box-shadow: 0 3px 3px #045f1f; 
+}
+
+.datos .cuadro .gris{
+    background-color: #d9d6d9;
+    box-shadow: 0 3px 3px #b3b1b3; 
+}
+
+.datos .cuadro  .btnConfirmar{
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    background-color:#002e99;
+    text-decoration: none;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 14px;
+    line-height: 40px;
+    margin: 30px 90px;
+}
