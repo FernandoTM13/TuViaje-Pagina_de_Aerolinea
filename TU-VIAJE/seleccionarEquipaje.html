@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Viaje</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <!-- Google Fonts NUnito -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        li{
+            list-style-type: none;
+        }
+        .overflow::-webkit-scrollbar {
+        width: 8px;               /* width of the entire scrollbar */
+        }
+
+        .overflow::-webkit-scrollbar-track {
+        background: rgb(241, 241, 241);        /* color of the tracking area */
+        }
+
+        .overflow::-webkit-scrollbar-thumb {
+        background-color: #a4a6a7;    /* color of the scroll thumb */
+        border-radius: 20px;       /* roundness of the scroll thumb */
+        border: 0px   /* creates padding around scroll thumb */
+        }
+    </style>
+    
+</head>
+<body onLoad='cargar();'>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #032D97;">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <div id="navbar" style="font-family: 'Nunito'; font-weight: 700;" class="text-light">
+                        <img src="./public/assets/logo-white.png" loading="lazy" width="60" height="35" class="d-inline-block align-top" alt="">
+                        Tu Viaje
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Collapsible wrapper -->
+                <div class="navbar-collapse text-center collapse show" id="navbarSupportedContent" style="font-family: 'Nunito'; font-weight: 700;">
+                    <!-- Left links -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">OFERTAS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">MIS VIAJES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">ESTADO DE VUELO</a>
+                        </li>
+                    </ul>
+
+                    <li class="nav-item dropdown" style="background-color: white; border-radius: 10px;">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-family: 'Nunito'; color: #032D97;">
+                            <img src="./public/assets/icon-person.png" loading="lazy" width="30" height="30" class="d-inline-block align-top" alt="" style="font-family: 'Nunito'" > PAULA ROJAS
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                          <li><a class="dropdown-item" href="#">Perfil</a></li>
+                          <li><a class="dropdown-item" href="#">Modificar Vuelo</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+                        </ul>
+                      </li>
+                      
+                    
+                    <button type="button" class="btn">
+                        <img src="./public/assets/icon-vuelo.png" loading="lazy" width="30" height="30" class="d-inline-block align-top" alt="">
+                        <div  class="badge bg-light rounded-circle text-black text-center px-1 py-1" style="height: 30px; width: 30px; font-size: 22px; ">
+                            <p style="text-align: center; top: auto;">2</p>
+                        </div>
+
+                    </button>
+    
+                    
+                </div>
+            
+            </div>
+            
+        </nav>
+    </header>
+
+    <main class="container-fluid" style="margin-top: 5rem;">
+        <div class="container text-center">
+            <a class="btn" style="background-color: #162C63; border-radius: 50%;">
+                <img src="./public/assets/asiento.png" style="width: 40px; height: 40px;" >
+            </a>
+            <img src="./public/assets/line.png" width="45px">
+            <a class="btn" style="background-color: #162C63; border-radius: 50%;">
+                <img src="./public/assets/maleta.png" style="width: 40px; height: 40px;" >
+            </a>
+            <img src="./public/assets/line.png" width="45px">
+            <a class="btn" style="background-color: none; border-radius: 50%; border-color: #E3E3E3;">
+                <img src="./public/assets/pasajero-n.png" style="width: 40px; height: 40px;" >
+            </a>
+            <img src="./public/assets/line.png" width="45px">
+            <a class="btn" style="background-color: none; border-radius: 50%; border-color: #E3E3E3;">
+                <img src="./public/assets/pago-n.png" style="width: 40px; height: 40px;" >
+            </a>
+        </div>
+        <div class="container my-4" style="font-family: 'Nunito';">
+            <h3 class="text-center" style="font-weight: 800; color: #032D97;">Compra Equipaje Extra</h3>
+            <div class="">
+                <p>Actualmente cuentas con:</p>
+                <div style="background-color: #E3E3E3; border-radius: 15px; width: 50%;">
+                    <div class="mx-3 pt-3 pb-1">
+                        <img src="public/assets/noto_luggage.png" width="30px" height="30px"> <b>1 Equipaje de Mano:</b>   10 Kg
+                    </div>
+                    <div class="mx-3 pb-3">
+                        <img src="public/assets/twemoji_luggage.png" width="30px" height="30px"> <b>2 Equipaje de Bodega:</b> 23 Kg cada una
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row my-2">
+                <div class="col-12 col-md-6" style="background-color: #EFEFEF; border-radius: 15px;">
+                    <div class="card mx-4 mt-4" style="border-radius: 15px;">
+                        <p class="card-header text-light py-0" style="border: none; background-color: #0F244B; width: 50%; 
+                        border-bottom-right-radius: 10px; border-top-left-radius: 10px;">Equipaje de Mano extra</p>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col col-sm-3">
+                                    <img src="./public/assets/noto_luggage.png" width="70px" height="70px">
+                                </div>
+                                <div class="col col-sm-5">
+                                    <h5 class="card-title"><b>10 kg</b></h5>
+                                    <p class="card-text">S/ 89.50</p>
+                                </div>
+                                <div class="col col-sm-4 text-center">
+                                    <a href="#" class="btn" style="border-color: #CC3F3F; color: #CC3F3F; border-radius: 10px;"><b>Agregar extra</b></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mx-4 mb-4 mt-3" style="border-radius: 15px;">
+                        <p class="card-header text-light py-0" style="border: none; background-color: #0F244B; width: 50%; 
+                        border-bottom-right-radius: 10px; border-top-left-radius: 10px;">Equipaje de bodega extra</p>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col col-sm-3">
+                                    <img src="./public/assets/twemoji_luggage.png" width="70px" height="70px">
+                                </div>
+                                <div class="col col-sm-5">
+                                    <h5 class="card-title"><b>23 kg</b></h5>
+                                    <p class="card-text">S/ 60.50</p>
+                                </div>
+                                <div class="col col-sm-4 text-center">
+                                    <a href="#" class="mx-2">
+                                        <img src="./public/assets/minor.png" style="width: 28px; height: 28px;">
+                                    </a>
+                                    <b>0</b>
+                                    <a href="#" class="mx-2">
+                                        <img src="./public/assets/plus.png" style="width: 28px; height: 28px;">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 px-1">
+                    <div class="mx-5 px-5 pt-4" style="border-color: #8E8E8E;">
+                        <div class="row">
+                            <div class="col col-9">
+                                <p class="mb-0" style="font-weight: 500;">Equipaje de Mano extra:</p>
+                                <p style="font-weight: 500;">Equipaje de Bodega extra:</p>
+                            </div>
+                            <div class="col col-3 text-end">
+                                <p class="mb-0"><b>0 Kg</b></p>
+                                <p class="mb-0"><b>0 Kg</b></p>
+                            </div>
+                        </div>
+                        <div class="row" style="color: #8E8E8E">
+                            <div class="col col-9">
+                                <p class="mb-0">Equipaje de Mano gratis:</p>
+                                <p class="">Equipaje de Bodega gratis:</p>
+                            </div>
+                            <div class="col col-3 text-end">
+                                <p class="mb-0"><b>11 Kg</b></p>
+                                <p class="mb-0"><b>46 Kg</b></p>
+                            </div>
+                        </div>
+                        <div class="row" style="color: #294ECF">
+                            <div class="col col-9">
+                                <p class="mb-0" style="font-weight: 500;">Costo equipaje: </p>
+                            </div>
+                            <div class="col col-3 text-end">
+                                <p class="mb-0"><b>S/. ----</b></p>
+                            </div>
+                        </div>
+                        <div class="mt-5">
+                            <a href="#" class="btn text-center text-light" style="background-color: #032D97; border-radius: 15px; width: 100%; font-weight: 700;">Continuar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="pb-4 mt-5 text-center" style="background-color: #061437;">
+        <div class="container">
+            <div class="row pb-0 pt-5 text-light" style="font-family: 'Nunito';">
+                <div class="col-lg col-md-12 aling-items-center justify-content-center">
+                    <img src="./public/assets/logo-white.png" alt="" style="width: 40%;">
+                    <div class="row py-1">
+                        <div class="col"><a href="#" style="text-decoration: none; color: white;"><h2 style="font-weight: 700;">Tú Viaje</h2></a></div>
+                    </div>
+                </div>
+                <div class="col-lg col-md-12 text-light pt-1">
+                    <div class="row">
+                        <div class="col"><h5 style="font-weight: 700;">Nosotros</h5></div>
+                    </div>
+                        <div class="row py-1">
+                            <div class="col"><a href="#" style="text-decoration: none; color: white;">¿Quiénes somos?</a></div>
+                        </div>
+                        <div class="row py-1">
+                            <div class="col"><a href="#" style="text-decoration: none; color: white;">Misión y Visión</a></div>
+                        </div>
+                        <div class="row py-1">
+                            <div class="col"><a href="#" style="text-decoration: none; color: white;">Nuestros Aliados</a></div>
+                        </div>
+                </div>
+                <div class="col-lg col-md-12 pt-1">
+                    <div class="row">
+                        <div class="col"><h5 style="font-weight: 700;">Redes Sociales</h5></div>
+                    </div>
+                    <div class="col-sm my-1">
+                        <a href="https://web.facebook.com/" style="text-decoration: none; color: white;">
+                            <img src="./public/assets/facebook.png" style="height: 30px; width: 30px;"> Facebook
+                        </a>
+                    </div>
+                    <div class="col-sm my-1">
+                        <a href="https://web.facebook.com/" style="text-decoration: none; color: white;">
+                            <img src="./public/assets/twitter.png" style="height: 30px; width: 30px;"> Twitter  
+                        </a>
+                    </div>
+                    <div class="col-sm my-1">
+                        <a href="https://web.facebook.com/" style="text-decoration: none; color: white;">
+                            <img src="./public/assets/insta.png"style="height: 30px; width: 30px;"> Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+    
+            <div class="row pt-3 mt-4 border-top border-light text-center">
+                <div class="col-lg-4 col-md-12">
+                    <a href="#" style="text-decoration: none; color: white;">Información Compañía</a>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <a href="3" style="text-decoration: none; color: white;">Privacidad y Política</a>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <a href="#" style="text-decoration: none; color: white;">Términos y Condiciones</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+</body>
+
+</html>
