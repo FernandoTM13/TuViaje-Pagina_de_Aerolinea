@@ -1,0 +1,83 @@
+.itenerario{
+    background-color: #cae9ff;
+    margin-top: 2rem;
+    height: 60px;
+    border-radius: 25px;
+}
+.titulo{
+    font-family: Nunito;
+    font-weight: bold;
+    color: #002e9a;
+    line-height: 4rem;
+    margin-left: 10px;
+}
+.estado{
+    margin-top: 5rem;
+    font-size: 1.5rem;
+    font-family: Nunito;
+    font-weight: bold;
+    color: #002e9a;
+}
+.contenedor{
+    margin-top: 1rem
+}
+.ida{
+    display: inline-block;
+    margin-left: 2rem;
+    font-size: 1rem;
+}
+.modificar{
+    float: right;
+    margin-right: 2rem;
+    background-color: #bfbfbf;
+    color: black;
+}
+.tablah{
+    background-color: #275fa1;
+    border-radius: 15px;
+    width: 95%;
+    height: 50px;
+    margin-left: 2rem;
+    margin-top: 1.5rem;
+
+}
+.tituloh{
+    font-size: 0.9rem;
+    color: whitesmoke;
+    margin-top: 15px;
+    font-family: Nunito;
+}
+
+.tablad{
+    border-radius: 15px;
+    width: 95%;
+    height: 50px;
+    margin-left: 2rem;
+    margin-top: 0.2 rem;
+}
+.titulod{
+    font-size: 0.9rem;
+    color: rgb(0, 0, 0);
+    margin-top: 15px;
+    font-family: Nunito;
+}
+.imprimir, .inicio{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    background-color: #ed8103;
+    width: 150px;
+    height: 40px;
+    line-height:40px;
+    font-family: Nunito;
+}
+.imprimir{
+    margin-left: 20px;
+}
+.inicio{
+    margin-right: 20px;
+}
+.botones{
+    margin-top: 30px;
+}
