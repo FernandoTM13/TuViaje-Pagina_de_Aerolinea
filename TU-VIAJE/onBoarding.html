@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="colorlib.com">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+
+    <title>Tu Viaje</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <!-- Google Fonts NUnito -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+      li{
+          list-style-type: none;
+      }
+      .fondo0 {
+          background-image: url('../TU-VIAJE/public/assets/plane1.png');
+          height: 100%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          /* background-attachment: fixed; */
+      }
+      .busqueda {
+          position: relative;
+          overflow-wrap: hidden;
+      }
+      
+      .busqueda .capa1 {
+          position: absolute;
+          top: 70%;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: rgba(19, 55, 98, 1);
+          color: white;
+
+      }
+  </style>
+    
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #032D97;">
+          <div class="container">
+              <a class="navbar-brand" href="#">
+                  <div id="navbar" style="font-family: 'Nunito'; font-weight: 700;" class="text-light">
+                      <img src="./public/assets/logo-white.png" loading="lazy" width="60" height="35" class="d-inline-block align-top" alt="">
+                      Tu Viaje
+                  </div>
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <!-- Collapsible wrapper -->
+              <div class="navbar-collapse text-center collapse show" id="navbarSupportedContent" style="font-family: 'Nunito'; font-weight: 700;">
+                  <!-- Left links -->
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                          <a class="nav-link text-light" href="#">OFERTAS</a>
+                      </li>
+                  </ul>
+
+                  <a type="button" class="btn px-3" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-radius: 10px; background-color: white; font-weight: 700;">
+                      REGÍSTRATE
+                  </a>
+
+                  <a type="button" class="btn px-3 text-light" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-radius: 10px; background-color: none; font-weight: 700;">
+                      INICIAR SESIÓN
+                  </a>
+                  
+                  <button type="button" class="btn" style="font-family: 'Nunito';">
+                      <img src="./public/assets/icon-vuelo.png" loading="lazy" width="30" height="30" class="d-inline-block align-top" alt="">
+                      <div  class="badge bg-light rounded-circle text-black text-center px-1 py-1" style="height: 30px; width: 30px; font-size: 21px; ">
+                          <p style="text-align: center; top: auto;">0</p>
+                      </div>
+
+                  </button>
+  
+                  
+              </div>
+          
+          </div>
+          
+      </nav>
+    </header>
+
+    <!-- main -->
+    <main class="container-fluid px-0" style="font-family: 'Nunito';">
+      <div class="container-fluid fondo0 p-0">
+            
+        <div class="container-fluid text-center p-0 busqueda">
+            <div class="m-0 p-0">
+                <img src="./public/assets/plane1.png" alt="" width="100%">
+                <div class="capa1">
+                    <div class="container">
+                        <div class="row d-none d-lg-block">
+                            <div class="col-lg col-sm-12">
+                                <!-- <h3 class="text-white my-3">¡Busca, tu vuelo de preferencia!</h3> -->
+                            </div>
+                        </div>
+                        <div class="row d-none d-lg-block">
+                            <div class="col-lg col-sm-12">
+                                
+                                <div class="input-group pt-4">
+                                    <input type="text" aria-label="First name" class="form-control" style="width:14%" placeholder="Lima, LIM - Perú">
+                    
+                                    <input type="search" class="form-control" placeholder="Seúl, INC - Corea del Sur" aria-label="Search"
+                                    aria-describedby="search-addon" style="height:auto; width:14%;border-radius:0px" required="true"/>
+                                    <select class="form-select" style="width:8%; border-radius:0">
+                                        
+                                        <option>SOLO IDA</option>
+                                        <option>IDA Y VUELTA</option>
+                                        <option>MULTIDESTINO</option>
+                                    </select>
+                                    <input type="date" value="2022-01-13" aria-label="Last name" class="form-control" style="width: 9%;">
+                                    <input type="date" aria-label="Last name" class="form-control" style="width: 9%;">
+                                    <select class="form-select" style="width:7%; border-radius:0" style="border-color: tomato;">
+                                        <option>ECONÓMICO</option>
+                                        <option>PREMIUN</option>
+                                    </select>
+                                    <!-- <p>
+                                        <a class="btn" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">1 PASAJERO</a>
+                                    </p>
+                                    <div class="collapse" id="multiCollapseExample1">
+                                        <div class="card card-body">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">An item</li>
+                                                <li class="list-group-item">A second item</li>
+                                                <li class="list-group-item">A third item</li>
+                                            </ul>
+                                        </div>
+                                    </div> -->
+                                    <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="border-color: rgb(214, 214, 214); background-color: white;">
+                                        1 PASAJERO
+                                    </button>
+                                        <ul class="dropdown-menu">
+                                            <li class="list-group-item ">Adulto
+                                                <a class="btn py-0" style="align-self: center;"><img src="./public/assets/-.png" style="height: 17px;"></a>1
+                                                <a class="btn py-0" style="padding-right: 0px;"><img src="./public/assets/+.png" style="height: 17px;"></a>
+                                                <p style="font-size: 12px; font-weight: lighter; margin-bottom: 1px;">12 añoa o más</p></li>
+                                            <li class="list-group-item">Niño
+                                                <a class="btn py-0" style="padding-left: 25px;"><img src="./public/assets/-.png" style="height: 17px;"></a>0
+                                                <a class="btn py-0" style="padding-right: 0px;"><img src="./public/assets/+.png" style="height: 17px;"></a>
+                                                <p style="font-size: 12px; font-weight: lighter; margin-bottom: 1px;">2 a 11 años</p>
+                                            </li>
+                                            <li class="list-group-item">Bebe
+                                                <a class="btn py-0 ml-2" style="padding-left: 25px;"><img src="./public/assets/-.png" style="height: 17px;"></a>0
+                                                <a class="btn py-0" style="padding-right: 0px;"><img src="./public/assets/+.png" style="height: 17px;"></a>
+                                                <p style="font-size: 12px; font-weight: lighter; margin-bottom: 1px;">Menores de 2 años</p>
+                                            </li>
+                                    </ul>
+                                    
+                                    <a type="button" class="btn" style="height: 60PX; border-radius:0px;background-color:#ED8103; border-bottom-right-radius: 10px; border-top-right-radius: 10px;"
+                                    href="./resultado0.html">
+                                        <p class="p-2 text-light">Mostrar Vuelos</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+      </div>
+      <div class="s002">
+        
+        </div>
+          <div class="certificaciones">
+            <div class="palabras_cert">
+              <img class="escudoimg" src="./" alt="escudo">
+              <p class= "certbold">Te protegemos con todas nuestras certificaciones</p>
+              <p class= "certnorm">Comprueba todas nuestra certificaciones a nivel mundial y mira</p>
+              <p class= "certabajo">que viajar con nosotros es la mejor opción</p>
+            </div>
+          </div>
+  
+          <div class="valoracion">
+            <p>¡Danos tu valoración!</p>
+            <img class="star firsts" src="images/estrella.png" alt="estrella">
+            <img class="star" src="images/estrella.png" alt="estrella">
+            <img class="star" src="images/estrella.png" alt="estrella">
+            <img class="star" src="images/estrella.png" alt="estrella">
+            <img class="star" src="images/estrella.png" alt="estrella">
+          </div>
+  
+          <div class="buscador_container">
+              <p>Encuentra las mejores ofertas</p>
+              <label class="labelbuscador" for="navbar-form navbar-left">Mi origen:</label>
+              <form class="navbar-form navbar-left" action="/action_page.php">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search">
+                  <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+              <img class= "lupa" src="images/lupa.png" alt="">
+          </div>
+  
+          <div class="bodymain">
+            <article class="primeracaja">
+            <a href="#"><img class="imgcaja1" src="images/dubai.jpeg" alt=""></a> 
+              <div class="textocaja1">
+                <p class="idavuelta arial rel">Ida: 16/07/2022   Vuelta: 20/08/2022</p>
+                <p class="lugar arial rel">Dubai, Emiratos Arabes</p>
+                <p class="precio arial rel">Precio Final desde</p>
+                <p class="preciomoneda arial rel"> $ 1240</p>
+                <p class="desc arial rel">20% descuento</p>
+              </div>
+            </article>
+            
+            <article class="segundacaja">
+              <a href="#"><img class="imgcaja2" src="images/dubai.jpeg" alt=""></a> 
+              <div class="textocaja2">
+                <p class="idavueltadef arial rel">Ida: 16/07/2022   Vuelta: 20/08/2022</p>
+                <p class="lugardef arial rel">New York, Estados Unidos</p>
+                <p class="preciodef arial rel">Precio Final desde</p>
+                <p class="monedadef arial rel"> $ 1240</p>
+                <p class="descdef arial rel">33% descuento</p>
+              </div>
+            </article>
+            
+            <article class="terceracaja">
+              <a href="#"><img class="imgcaja2" src="images/dubai.jpeg" alt=""></a> 
+              <div class="textocaja2">
+                <p class="idavueltadef arial rel">Ida: 16/07/2022   Vuelta: 20/08/2022</p>
+                <p class="lugardef arial rel">New York, Estados Unidos</p>
+                <p class="preciodef arial rel">Precio Final desde</p>
+                <p class="monedadef arial rel"> $ 1240</p>
+                <p class="descdef arial rel">33% descuento</p>
+              </div>
+            </article>
+  
+            <article class="cuartacaja">
+              <a href="#"><img class="imgcaja2" src="images/dubai.jpeg" alt=""></a> 
+              <div class="textocaja2">
+                <p class="idavueltadef arial rel">Ida: 16/07/2022   Vuelta: 20/08/2022</p>
+                <p class="lugardef arial rel">New York, Estados Unidos</p>
+                <p class="preciodef arial rel">Precio Final desde</p>
+                <p class="monedadef arial rel"> $ 1240</p>
+                <p class="descdef arial rel">33% descuento</p>
+              </div>
+            </article>
+  
+            <article class="quintacaja">
+              <a href="#"><img class="imgcaja2" src="images/dubai.jpeg" alt=""></a> 
+              <div class="textocaja2">
+                <p class="idavueltadef arial rel">Ida: 16/07/2022   Vuelta: 20/08/2022</p>
+                <p class="lugardef arial rel">New York, Estados Unidos</p>
+                <p class="preciodef arial rel">Precio Final desde</p>
+                <p class="monedadef arial rel"> $ 1240</p>
+                <p class="descdef arial rel">33% descuento</p>
+              </div>
+            </article>
+          </div>
+  
+          <div class="slogan">
+            <div class="cuadroslogan">
+              <p class="unete whit arial rel">Únete viajando en la mejor aerolínea</p>
+              <p class="text1 whit arial rel">Saca a flote tus planes en “TuViaje”, llevamos los</p>
+              <p class="text2 whit arial rel" >estandares de calidad de nivel mundial para darte</p>
+              <p class="text3 whit arial rel">la mejor experiencia de vuelo a tu destino.</p>
+              </div>
+            <img class="imgslogan" src="images/ati.png" alt="">
+  
+          </div>
+    </main>
+
+
+</body>
+
+
+
+    <script src="js/extention/choices.js"></script>
+    <script src="js/extention/flatpickr.js"></script>
+    <script>
+      flatpickr(".datepicker",
+      {});
+
+    </script>
+    <script>
+      const choices = new Choices('[data-trigger]',
+      {
+        searchEnabled: false,
+        itemSelectText: '',
+      });
+
+    </script>
+  
+</html>

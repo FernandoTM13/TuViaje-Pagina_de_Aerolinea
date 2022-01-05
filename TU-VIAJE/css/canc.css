@@ -1,0 +1,16 @@
+.arial {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.headC p {
+  color: #061437;
+  font-weight: bold;
+  font-size: 18px;
+  position: relative;
+  left: 80px;
+  display: inline-block;
+}
+
+.btn-Cancelar {
+  display: inline-block;
+}
